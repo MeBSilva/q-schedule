@@ -15,9 +15,3 @@ yarn
 ```bash
 yarn start:dev
 ```
-
-### Start Server:
-
-```bash
-yarn start
-```

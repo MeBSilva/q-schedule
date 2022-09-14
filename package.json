@@ -1,7 +1,7 @@
 {
   "name": "q-schedule",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Scheduling web application",
   "author": "Matheus Brasil",
   "type": "module",
