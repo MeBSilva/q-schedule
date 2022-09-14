@@ -1,6 +1,6 @@
 export class InvalidScheduleTimeError extends Error {
   constructor() {
-    super("O intervalo de horário escolhido é inválido.");
+    super("The chosen interval is invalid.");
     this.name = "InvalidScheduleTimeError";
   }
 }

@@ -1,6 +1,6 @@
 export class UnavailableScheduleTimeError extends Error {
   constructor() {
-    super("Este horário não está disponível.");
+    super("The chosen interval is not available.");
     this.name = "UnavailableScheduleTimeError";
   }
 }
