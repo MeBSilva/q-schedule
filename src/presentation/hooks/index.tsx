@@ -1,17 +1,13 @@
 import React from "react";
 
-// import { AuthProvider } from "./auth";
-// import { CartProvider } from "./cart";
 import { ModalProvider } from "./modal";
+import { ScheduleListProvider } from "./scheduleList";
 
 function AppProvider({ children }: React.PropsWithChildren) {
   return (
-    // <CartProvider>
-    <ModalProvider>
-      {children}
-      {/* <AuthProvider>{children}</AuthProvider> */}
-    </ModalProvider>
-    // </CartProvider>
+    <ScheduleListProvider>
+      <ModalProvider>{children}</ModalProvider>
+    </ScheduleListProvider>
   );
 }
 

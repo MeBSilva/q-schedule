@@ -33,7 +33,7 @@ const ModalProvider = ({
     >
       <Modal
         isOpen={isVisible}
-        onClickConfirmButton={hideModal}
+        onClickCancelButton={hideModal}
         toggleModal={() => setIsVisible(!isVisible)}
         {...modalOptions}
       />
@@ -45,7 +45,7 @@ const ModalProvider = ({
 const useModal = (): ModalContextData => {
   const context = useContext(ModalContext);
 
-  if (!context) {
+  if (!context || Object.keys(context).length < 1) {
     throw new Error("useModal must be used within a ModalProvider");
   }
 

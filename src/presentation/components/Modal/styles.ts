@@ -1,10 +1,11 @@
 import { Container } from "@/presentation/styles";
 import styled from "styled-components";
+import Button from "../Button";
 
 export const ModalContainer = styled.div<{ isOpen: boolean }>`
   z-index: 2;
   display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
-  position: absolute;
+  position: fixed;
   align-items: center;
   justify-content: center;
   top: 0;
@@ -28,7 +29,29 @@ export const ModalContent = styled.div`
 
 export const ModalButtonContainer = styled(Container)`
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   flex: 0;
-  margin-top: auto;
+`;
+
+export const ModalCancelButton = styled(Button)`
+  background-color: red;
+  padding: 0;
+  min-width: 2em;
+  min-height: 2em;
+
+  > span {
+    position: absolute;
+    display: flex;
+    width: 1em;
+    border: 2px solid ${({ theme }) => theme.colors.secondary.white};
+    border-radius: 2px;
+
+    &:first-child {
+      rotate: 50deg;
+    }
+
+    &:last-child {
+      rotate: 310deg;
+    }
+  }
 `;
